@@ -1,41 +1,40 @@
 defmodule Foo do
-  @behaviour Lawful
-  require A
-  alias A
-
-  use B
-
-  def id(x), do: x
-
-  import C
-  @behaviour Chaotic
-  @doc "oh no!"
-  defmacro a_macro do
-    quote do
-      alias X
-      alias H
-
-      alias Z
-      import Ecto.Query
-      X.foo()
-      use unquote(__MODULE__)
-    end
-  end
   @shortdoc "it's pretty short"
-  import A
-  alias C
-  alias D
-
-  require C
-  require B
-
-  use A
-
-  alias C
-  alias A
-
   @moduledoc "README.md"
              |> File.read!()
              |> String.split("<!-- MDOC !-->")
              |> Enum.fetch!(1)
+  @behaviour Chaotic
+  @behaviour Lawful
+
+  use B
+  use A
+
+  import A
+  import C
+
+  alias A
+  alias C
+  alias D
+
+  require A
+  require B
+  require C
+
+  def id(x), do: x
+
+  @doc "oh no!"
+  defmacro a_macro do
+    quote do
+      use unquote(__MODULE__)
+
+      import Ecto.Query
+
+      alias H
+      alias X
+      alias Z
+
+      X.foo()
+    end
+  end
 end
