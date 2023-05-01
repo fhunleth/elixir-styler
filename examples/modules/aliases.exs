@@ -1,11 +1,6 @@
-alias D
-alias A.{B}
-alias A.{
-  A,
-  B,
-  C
-}
-alias A.B
-
-alias B
 alias A
+alias A.A
+alias A.B
+alias A.C
+alias B
+alias D
