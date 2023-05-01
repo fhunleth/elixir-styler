@@ -1,22 +1,12 @@
-a
-|> Enum.filter(fun)
-|> Enum.count()
+Enum.count(a, fun)
 
 a
-|> Enum.filter(fun)
-|> Enum.count()
+|> Enum.count(fun)
 |> IO.puts()
 
-a
-|> Enum.map(b)
-|> Enum.join("|")
+Enum.map_join(a, "|", b)
+Map.new(a, b)
 
-a
-|> Enum.map(b)
-|> Enum.into(%{})
-
-a_multiline_mapper
-|> Enum.map(fn %{gets: shrunk, down: to_a_more_reasonable} ->
+Enum.into(a_multiline_mapper, size, fn %{gets: shrunk, down: to_a_more_reasonable} ->
   {shrunk, to_a_more_reasonable}
 end)
-|> Enum.into(size)

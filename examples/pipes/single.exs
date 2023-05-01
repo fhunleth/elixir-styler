@@ -1,6 +1,6 @@
 defmodule Widgets do
-  def foo(widget), do: widget |> do_foo()
+  @moduledoc false
+  def foo(widget), do: do_foo(widget)
 end
 
-foo
-|> bar(baz, bop, boom)
+bar(foo, baz, bop, boom)
