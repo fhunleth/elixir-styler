@@ -1,8 +1,11 @@
 defmodule A do
+  @moduledoc false
 end
 
 defmodule B do
+  @moduledoc false
   defmodule C do
+    @moduledoc false
   end
 end
 
